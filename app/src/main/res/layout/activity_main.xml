@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <top.timewl.bookmanage.View.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="图书管理"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttongroup"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/book_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/book"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_book_select"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/book_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:text="图书"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/borrow_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/borrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_borrow_select"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/borrow_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:text="借阅"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reader_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/reader"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_reader_select"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/reader_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:text="读者"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/system_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/system"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_system_select"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/system_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:text="系统"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
