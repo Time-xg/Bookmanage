@@ -28,7 +28,6 @@
         android:layout_weight="1"
         android:layout_marginBottom="5dp"
         >
-
         <LinearLayout
             android:id="@+id/book_layout"
             android:layout_width="wrap_content"

@@ -8,15 +8,28 @@ import android.widget.FrameLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import androidx.annotation.LongDef;
 import androidx.annotation.Nullable;
 
 import com.google.zxing.Result;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.io.IOException;
+
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import top.timewl.bookmanage.MyApplication;
 import top.timewl.bookmanage.R;
 
 public class ScanActivity extends Activity implements ZXingScannerView.ResultHandler{
-    private String TAG = "scan";
+    private String localHost = MyApplication.getInstance().getLocalHost();
+    private final String TAG = getClass().getName();
     private ZXingScannerView mScannerView;
 
     @Override
@@ -26,8 +39,6 @@ public class ScanActivity extends Activity implements ZXingScannerView.ResultHan
         setContentView(R.layout.activity_scanner);
         FrameLayout contentView = findViewById(R.id.content_frame);
         contentView.addView(mScannerView);
-
-
     }
 
     @Override
@@ -35,10 +46,41 @@ public class ScanActivity extends Activity implements ZXingScannerView.ResultHan
         // Do something with the result here
         Log.v(TAG, rawResult.getText()); // Prints scan results
         Log.v(TAG, rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
-        Toast.makeText(ScanActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
+
+        OkHttpClient client = new OkHttpClient();
+        FormBody.Builder formbody = new FormBody.Builder();
+        formbody.add("isbn",rawResult.getText());
+        Request request = new Request.Builder()
+                .url(localHost + "book/addBook/")
+                .post(formbody.build())
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                Log.d(TAG,"服务器错误");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(ScanActivity.this, "服务器错误", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                finish();
+            }
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                Log.d(TAG,"添加成功");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(ScanActivity.this, "服务器错误", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                finish();
+            }
+        });
         // If you would like to resume scanning, call this method below:
         //mScannerView.resumeCameraPreview(this);
-        finish();
+
     }
 
     @Override

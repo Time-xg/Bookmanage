@@ -14,7 +14,7 @@ public class BaseFragment extends Fragment {
 
     public Context getContext(){
         if (activity == null){
-            return MyApplication.getInstance();
+            return MyApplication.getInstance().getApplicationContext();
         }
         return activity;
     }

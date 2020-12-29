@@ -5,12 +5,19 @@ import android.content.Context;
 
 public class MyApplication extends Application {
     private static MyApplication myApplication;
+    private final String localHost = "http://192.168.10.79:8080/";
 
-    public static Context getInstance(){
-        if (myApplication == null){
-            myApplication = new MyApplication();
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        myApplication = this;
+    }
 
-        }
+    public static MyApplication getInstance(){
         return myApplication;
+    }
+
+    public String getLocalHost(){
+        return localHost;
     }
 }
