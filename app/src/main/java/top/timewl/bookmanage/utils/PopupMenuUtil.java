@@ -3,6 +3,7 @@ package top.timewl.bookmanage.utils;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import top.timewl.bookmanage.R;
+import top.timewl.bookmanage.activity.BorrowActivity;
 
 public class PopupMenuUtil {
 
@@ -128,6 +130,8 @@ public class PopupMenuUtil {
                     _rlClickAction();
                     break;
                 case 1:
+                    Intent intent = new Intent(context, BorrowActivity.class);
+                    context.startActivity(intent);
                     break;
                 case 2:
                     break;

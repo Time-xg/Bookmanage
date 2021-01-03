@@ -1,4 +1,4 @@
-package top.timewl.bookmanage.Fragment;
+package top.timewl.bookmanage.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import top.timewl.bookmanage.R;
-import top.timewl.bookmanage.View.CustomTitleBar;
+import top.timewl.bookmanage.view.CustomTitleBar;
 
 public class SystemFragment extends BaseFragment{
     private CustomTitleBar titleBar;
@@ -19,7 +19,7 @@ public class SystemFragment extends BaseFragment{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_reader,container,false);
+        view = inflater.inflate(R.layout.fragment_system,container,false);
         return view;
 
     }

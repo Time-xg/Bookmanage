@@ -1,7 +1,6 @@
-package top.timewl.bookmanage.Fragment;
+package top.timewl.bookmanage.fragment;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 
 import androidx.annotation.NonNull;

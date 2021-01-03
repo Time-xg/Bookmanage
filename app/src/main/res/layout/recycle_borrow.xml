@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="top.timewl.bookmanage.fragment.viewmodel.BorrowInfoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/book_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{@string/book_name + viewModel.borrow.book_name}'
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/user_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{@string/user_name + viewModel.borrow.user_name}'
+            android:textSize="16sp"
+            android:layout_below="@id/book_txt"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/num_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text='@{@string/borrow_num + viewModel.borrow.borrow_num}'
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text='@{@string/borrow_date + viewModel.borrow.borrow_time}'
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

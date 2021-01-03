@@ -1,4 +1,4 @@
-package top.timewl.bookmanage.View;
+package top.timewl.bookmanage.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;

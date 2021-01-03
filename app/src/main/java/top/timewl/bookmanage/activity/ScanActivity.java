@@ -1,14 +1,11 @@
-package top.timewl.bookmanage.Activity;
+package top.timewl.bookmanage.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
-import android.widget.SearchView;
 import android.widget.Toast;
 
-import androidx.annotation.LongDef;
 import androidx.annotation.Nullable;
 
 import com.google.zxing.Result;
@@ -80,7 +77,7 @@ public class ScanActivity extends Activity implements ZXingScannerView.ResultHan
         });
         // If you would like to resume scanning, call this method below:
         //mScannerView.resumeCameraPreview(this);
-
+        finish();
     }
 
     @Override

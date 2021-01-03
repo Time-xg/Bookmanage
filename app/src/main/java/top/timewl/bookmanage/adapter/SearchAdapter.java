@@ -1,7 +1,6 @@
-package top.timewl.bookmanage.Adapter;
+package top.timewl.bookmanage.adapter;
 
 import android.content.Context;
-import android.graphics.Canvas;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

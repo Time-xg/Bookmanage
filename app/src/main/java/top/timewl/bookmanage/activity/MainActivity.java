@@ -1,4 +1,4 @@
-package top.timewl.bookmanage.Activity;
+package top.timewl.bookmanage.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,23 +12,21 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import top.timewl.bookmanage.Fragment.BookFragment;
-import top.timewl.bookmanage.Fragment.BorrowFragment;
-import top.timewl.bookmanage.Fragment.ReaderFragment;
-import top.timewl.bookmanage.Fragment.SystemFragment;
+import top.timewl.bookmanage.fragment.BookFragment;
+import top.timewl.bookmanage.fragment.BorrowFragment;
+import top.timewl.bookmanage.fragment.ReaderFragment;
+import top.timewl.bookmanage.fragment.SystemFragment;
 import top.timewl.bookmanage.R;
-import top.timewl.bookmanage.View.CustomTitleBar;
+import top.timewl.bookmanage.view.CustomTitleBar;
 import top.timewl.bookmanage.utils.PopupMenuUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -93,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+        
 
     }
 

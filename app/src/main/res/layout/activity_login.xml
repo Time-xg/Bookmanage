@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingLeft="20dp">
+
+    <TextView
+        android:id="@+id/registered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="44dp"
+        android:text="新用户注册"
+        android:clickable="true"
+        android:textColor="#080808"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registered"
+        android:layout_marginTop="51dp"
+        android:text="欢迎使用图书管理系统"
+        android:textSize="26sp"
+        android:textColor="#080808"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="21dp"
+        android:text="手机号码"
+        android:textColor="#080808"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@id/textView5"
+        android:hint="请输入手机号"
+        android:inputType="textPersonName"
+        android:textColor="#080808"/>
+
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="15dp"
+        android:text="密码"
+        android:textColor="#080808"/>
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="请输入密码"
+        android:textColor="#080808"/>
+
+    <CheckBox
+        android:id="@+id/remain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记住密码"
+        android:layout_alignLeft="@+id/pass"
+        android:layout_alignStart="@+id/pass"
+        android:layout_below="@id/pass"
+        android:textColor="#080808"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pass"
+        android:layout_alignStart="@+id/pass"
+        android:layout_below="@+id/remain"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/blue_btn"
+        android:text="登录"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>
