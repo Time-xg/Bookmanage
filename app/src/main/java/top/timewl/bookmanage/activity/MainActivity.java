@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 popupWindow.dismiss();
                 Intent intent = new Intent(getApplicationContext(), ScanActivity.class);
+                intent.putExtra("action","add");
                 startActivity(intent);
 
             }
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                     @Override
                     public void onClick(View v) {
-                        PopupMenuUtil.getInstance()._show(getApplicationContext(), buttonGroup);
+                        PopupMenuUtil.getInstance()._show(MainActivity.this, buttonGroup);
                     }
                 });
                 break;

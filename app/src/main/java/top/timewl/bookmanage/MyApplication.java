@@ -5,7 +5,8 @@ import android.content.Context;
 
 public class MyApplication extends Application {
     private static MyApplication myApplication;
-    private final String localHost = "http://192.168.1.238:8000/";
+//    private final String localHost = "http://192.168.1.238:8000/";
+    private final String localHost = "http://192.168.10.79:8000/";
 
     @Override
     public void onCreate() {

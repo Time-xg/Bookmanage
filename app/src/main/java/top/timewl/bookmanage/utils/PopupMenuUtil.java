@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 import top.timewl.bookmanage.R;
 import top.timewl.bookmanage.activity.BorrowActivity;
+import top.timewl.bookmanage.activity.ScanActivity;
 
 public class PopupMenuUtil {
 

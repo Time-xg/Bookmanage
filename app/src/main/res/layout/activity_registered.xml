@@ -6,10 +6,10 @@
 
     <Button
         android:id="@+id/back"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_back"
-
+        android:layout_margin="15dp"
         android:textColor="#87CEFA" />
 
     <TextView
@@ -70,6 +70,26 @@
         android:inputType="textPersonName"
         android:hint="请输入密码"
         android:textColor="#0A0A0A"/>
+    <RadioGroup
+        android:id="@+id/gp_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/et_pass"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"/>
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"/>
+    </RadioGroup>
+
 
 
     <Button
@@ -78,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/phone"
         android:layout_alignStart="@+id/phone"
-        android:layout_below="@+id/et_pass"
+        android:layout_below="@+id/gp_gender"
         android:background="@drawable/blue_btn"
         android:text="下一步"
         android:layout_marginTop="10dp"

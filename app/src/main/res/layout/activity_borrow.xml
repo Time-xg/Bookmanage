@@ -39,7 +39,8 @@
                     android:id="@+id/user_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/user_txt"/>
+                    android:layout_toRightOf="@id/user_txt"
+                    android:text="@={viewModel.userId}"/>
             </LinearLayout>
 
             <LinearLayout
@@ -50,16 +51,42 @@
                 android:layout_below="@id/user_layout"
                 android:paddingHorizontal="15dp">
                 <TextView
+                    android:layout_weight="1"
                     android:id="@+id/book_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="书籍ID: "
+                    android:text="图书选择: "
+                    android:textSize="18sp"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_btn"
+                    android:textColor="@color/white"
+                    android:text="书籍扫描"
+                    android:onClick="@{(view) -> viewModel.scanBookOnClick()}"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/day_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+                android:layout_below="@id/book_layout">
+                <TextView
+                    android:id="@+id/day_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="借阅天数: "
                     android:textSize="18sp"/>
                 <EditText
-                    android:id="@+id/book_et"
+                    android:id="@+id/day_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/book_txt"/>
+                    android:layout_toRightOf="@id/user_txt"
+                    android:text="@={viewModel.borrowDay}"/>
             </LinearLayout>
 
             <Button
@@ -67,10 +94,14 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/blue_btn"
                 android:text="借阅书籍"
+                android:textSize="20sp"
                 android:textColor="@color/white"
-                android:layout_below="@id/book_layout"
+                android:layout_below="@id/day_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:onClick="@{(view) -> viewModel.borrowBookOnClick()}"
+                />
         </RelativeLayout>
     </LinearLayout>
 
